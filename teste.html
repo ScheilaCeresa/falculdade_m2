@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Obras de Museu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de Obras de Museu</h1>
+    
+    <form id="formObra">
+        <div>
+            <label for="nomeObra">Nome da Obra:*</label><br>
+            <input type="text" id="nomeObra" name="nomeObra" maxlength="100" placeholder="Digite o nome da obra">
+        </div>
+        <br>
+        
+        <div>
+            <label for="autor">Autor:*</label><br>
+            <input type="text" id="autor" name="autor" maxlength="100" placeholder="Digite o nome do autor">
+        </div>
+        <br>
+        
+        <div>
+            <label for="anoObra">Ano da Obra:*</label><br>
+            <input type="text" id="anoObra" name="anoObra" maxlength="4" placeholder="Digite o ano">
+        </div>
+        <br>
+        
+        <div>
+            <label for="periodoObra">Período da Obra:*</label><br>
+            <select id="periodoObra" name="periodoObra">
+                <option value="">Selecione o período</option>
+                <option value="d.C">d.C</option>
+                <option value="a.C">a.C</option>
+            </select>
+        </div>
+        <br>
+        
+        <div>
+            <label for="tipoObra">Tipo da Obra:*</label><br>
+            <select id="tipoObra" name="tipoObra">
+                <option value="">Selecione o tipo</option>
+                <option value="quadro">Quadro</option>
+                <option value="escultura">Escultura</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+        <br>
+        
+        <div>
+            <label for="detalhamento">Detalhamento:</label><br>
+            <textarea id="detalhamento" name="detalhamento" rows="4" maxlength="2000" placeholder="Digite os detalhes da obra"></textarea>
+        </div>
+        <br>
+        
+        <button type="button" onclick="validarFormulario()">Cadastrar Obra</button>
+    </form>
+    
+    <h2>Obras Cadastradas</h2>
+    <table id="tabelaObras">
+        <thead>
+            <tr>
+                <th>Nome da Obra</th>
+                <th>Autor</th>
+                <th>Ano</th>
+                <th>Período</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As obras serão adicionadas aqui via JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
