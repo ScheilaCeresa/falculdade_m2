@@ -224,26 +224,4 @@ function limparFormulario() {
     document.getElementById('periodoObra').value = '';
     document.getElementById('tipoObra').value = '';
     document.getElementById('detalhamento').value = '';
-}
-
-// Inicializar a tabela se não existir
-document.addEventListener('DOMContentLoaded', function() {
-    if (!document.getElementById('tabelaObras')) {
-        const tabela = document.createElement('table');
-        tabela.id = 'tabelaObras';
-        tabela.innerHTML = `
-            <thead>
-                <tr>
-                    <th>Nome da Obra</th>
-                    <th>Autor</th>
-                    <th>Ano</th>
-                    <th>Período</th>
-                    <th>Tipo</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        `;
-        document.body.appendChild(tabela);
-    }
-});
+};
